@@ -1,56 +1,98 @@
-section.info {
+section:nth-of-type(even) {
+  background-color: $main-dark;
+}
+
+section:nth-of-type(odd) {
   background-color: $main-light;
-  padding: 200px 0;
+}
+
+.info {
+  padding: 200px 0 100px 0;
   .wrapper {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: flex-end;
   }
   .container {
     width: 45%;
+    margin-left: 5%;
     position: relative;
     i {
       position: absolute;
-      top: 0;
+      top: 20%;
       left: -50px;
       color: $main-dark;
       z-index: 10;
-      // display: block;
-      // height: 30px;
-      // width: 30px;
-      // background-color: $pop-color;
-      // border-radius: 50%;
       &::after {
         content: "";
         display: block;
-        z-index: 5;
-        height:30px;
-        width:30px;
+        z-index: -1;
+        height:40px;
+        width:40px;
         background-color: $pop-color;
         border-radius:50%;
         position: absolute;
-        top:0;
+        top:-10px;
+        left: -10px;
       }
     }
-    // i::before {
-    //   content: "";
-    //   display: block;
-    //   position: absolute;
-    //   width: 100%;
-    //   height: 100%;
-    //   background: $pop-color;
-    // }
+    h2 {
+      font-size: 4.5rem;
+      line-height: 99.8px;
+    }
   }
 }
 
-section.blog {
-  background-color: $main-dark;
+.blog {
+  padding: 0;
+  position: relative;
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+  }
+  h3 {
+    font-size: 4.5rem;
+
+  }
+  article {
+    width: 45%;
+    margin: 5% 0;
+    &:first-of-type {
+      align-self: flex-end;
+    }
+  }
+  img {
+    width: 45%;
+    position: absolute;
+    box-shadow: 20px 20px $pop-color;
+    &:first-of-type {
+      top: -10%;
+      left: 0;
+    }
+    &:last-of-type {
+      order: 2;
+      bottom: -10%;
+      right: 0;
+      transform: rotateY(180deg); 
+    }
+  }
+  button {
+    background-color: $pop-color;
+    color: $main-dark;
+  }
 }
 
-section.extras {
-  background-color: $main-light;
+.extras {
+  padding: 125px 0;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  p {
+    width: 80%;
+  }
 }
 
-section.gallery {
-  background-color: $main-dark;
+.gallery {
 }
