@@ -9,8 +9,11 @@ header {
   nav {
     ul {
       display: flex;
-      li {
-        padding: 0 50px;
+      li:not(:nth-of-type(1)) {
+        padding: 0 30px;
+      }
+      li:nth-of-type(1) {
+        padding-right: 30px;
       }
       a {
         color: white;
@@ -21,6 +24,13 @@ header {
     width: 50%;
     position: absolute;
     right: 0;
-    bottom: -40%;
+    bottom: -30%;
+  }
+  h1 {
+    width: 40%;
+    .resto {
+      color: $main-dark;
+      background-color: white;
+    }
   }
 }
