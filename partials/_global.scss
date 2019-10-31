@@ -1,5 +1,11 @@
+html {
+  font-size: 62.5%;
+}
+
 ul, li {
   list-style-type: none;
+  margin: 0;
+  padding: 0;
 }
 
 a {
@@ -9,4 +15,5 @@ a {
 h1 {
   text-transform: uppercase;
   color: white;
+  font-size: 6.9rem;
 }

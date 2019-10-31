@@ -1,8 +1,26 @@
 header {
-  background-image: url("/assets/home-header.jpg");
+  padding: 1%;
+  background-image: url("../assets/home-header.jpg");
+  background-position: center;
+  background-size: cover;
+  height: 90vh;
+  width: 100%;
+  position: relative;
   nav {
     ul {
       display: flex;
+      li {
+        padding: 0 50px;
+      }
+      a {
+        color: white;
+      }
     }
+  }
+  img {
+    width: 50%;
+    position: absolute;
+    right: 0;
+    bottom: -40%;
   }
 }

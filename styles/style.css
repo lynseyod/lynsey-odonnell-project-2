@@ -145,19 +145,40 @@ legend, button::-moz-focus-inner, input::-moz-focus-inner {
   clip: rect(0 0 0);
   overflow: hidden; }
 
+html {
+  font-size: 62.5%; }
+
 ul, li {
-  list-style-type: none; }
+  list-style-type: none;
+  margin: 0;
+  padding: 0; }
 
 a {
   text-decoration: none; }
 
 h1 {
   text-transform: uppercase;
-  color: white; }
+  color: white;
+  font-size: 6.9rem; }
 
 header {
-  background-image: url("/assets/home-header.jpg"); }
+  padding: 1%;
+  background-image: url("../assets/home-header.jpg");
+  background-position: center;
+  background-size: cover;
+  height: 90vh;
+  width: 100%;
+  position: relative; }
   header nav ul {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex; }
+    header nav ul li {
+      padding: 0 50px; }
+    header nav ul a {
+      color: white; }
+  header img {
+    width: 50%;
+    position: absolute;
+    right: 0;
+    bottom: -40%; }
