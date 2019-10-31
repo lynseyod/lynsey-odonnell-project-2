@@ -4,7 +4,8 @@ html {
 
 body {
   font-size: 2rem;
-  font-family: $font, sans-serif;
+  font-family: $font;
+  color: #fff;
 }
 
 .wrapper {
@@ -23,8 +24,22 @@ a {
   text-decoration: none;
 }
 
-h1 {
+h1,
+h2,
+h3 {
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+h2 {
   text-transform: uppercase;
-  color: white;
-  font-size: 6.9rem;
+}
+
+h2 {
+  font-weight: 400;
+}
+
+img {
+  max-width: 100%;
 }
