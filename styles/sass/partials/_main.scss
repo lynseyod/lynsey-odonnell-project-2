@@ -130,7 +130,7 @@ section:nth-of-type(odd) {
 
 .contact-form {
   background-color: $main-dark;
-  box-shadow: 10px 10px $pop-color;
+  box-shadow: 20px 20px $pop-color;
   padding: 3%;
   width: 60%;
   height: 500px;
@@ -172,6 +172,57 @@ section:nth-of-type(odd) {
   button {
     margin-top: 5%;
     display: block;
+  }
+}
+
+.blog-container {
+  background-color: $main-light;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  aside {
+    width: 25%;
+    order: -1;
+    ul {
+      flex-direction: column;
+      padding-left: 20px;
+      width: 100%;
+      li {
+        list-style-type: disc;
+      }
+    }
+  }
+  main {
+    width: 60%;
+    position: relative;
+    article {
+      border-left: 5px solid $pop-color;
+      border-bottom: 5px solid $pop-color;
+      padding-top: 500px;
+    }
+    article img {
+      width: calc(100% - 20px);
+      position: absolute;
+      top: -100px;
+      right: 0;
+      box-shadow: -20px 20px $pop-color;
+    }
+  }
+  .wrapper {
+    flex-direction: column;
+  }
+  .comments {
+    padding-top: 50px;
+    * {
+      border: 1px solid tomato;
+    }
+    .comment-container {
+      display: flex;
+      .comment-img {
+        width: 30%;
+        margin-right: 20px;
+      }
+    }
   }
 }
 
