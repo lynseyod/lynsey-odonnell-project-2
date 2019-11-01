@@ -2,7 +2,6 @@ header {
   padding: 1%;
   background-position: center;
   background-size: cover;
-  height: 90vh;
   width: 100%;
   position: relative;
   .wrapper {
@@ -29,7 +28,6 @@ header {
     bottom: -30%;
   }
   h1 {
-    width: 40%;
     font-size: 6.9rem;
     font-weight: 600;
     margin-top: 50px;
@@ -42,14 +40,22 @@ header {
 
 .home-header {
   background-image: url("../assets/home-header.jpg");
+  height: 90vh;
   li:nth-of-type(1){
     border-bottom: 3px solid $pop-color;
+  }
+  h1 {
+    width: 40%;
   }
 }
 
 .contact-header {
   background-image: url("../assets/contact-header.jpg");
+  height: 80vh;
   li:nth-of-type(4) {
     border-bottom: 3px solid $pop-color;
+  }
+  h1 {
+    margin-top: 10%;
   }
 }
