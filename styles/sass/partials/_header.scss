@@ -1,20 +1,21 @@
 header {
   padding: 1%;
-  background-image: url("../assets/home-header.jpg");
   background-position: center;
   background-size: cover;
   height: 90vh;
   width: 100%;
   position: relative;
+  .wrapper {
+    flex-direction: column;
+  }
   nav {
     ul {
       display: flex;
       li:not(:nth-of-type(1)) {
-        padding: 0 30px;
+        margin: 0 30px;
       }
       li:nth-of-type(1) {
-        padding-right: 30px;
-        border-bottom: 2px solid $pop-color;
+        margin-right: 30px;
       }
       a {
         color: white;
@@ -31,10 +32,24 @@ header {
     width: 40%;
     font-size: 6.9rem;
     font-weight: 600;
-    // maybe a before effect?
+    margin-top: 50px;
     .resto {
       color: $main-dark;
       background-color: white;
     }
+  }
+}
+
+.home-header {
+  background-image: url("../assets/home-header.jpg");
+  li:nth-of-type(1){
+    border-bottom: 3px solid $pop-color;
+  }
+}
+
+.contact-header {
+  background-image: url("../assets/contact-header.jpg");
+  li:nth-of-type(4) {
+    border-bottom: 3px solid $pop-color;
   }
 }

@@ -4,9 +4,65 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Document</title>
+
+  <!-- get the fonts in there! -->
+  <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:300,400,600&display=swap" rel="stylesheet"> 
+
+  <!-- link fontawesome -->
+  <script src="https://kit.fontawesome.com/3d22ae5abd.js" crossorigin="anonymous"></script>
+
+  <!-- link some styles! -->
+  <link rel="stylesheet" href="./styles/style.css">
+
+  <title>Contact us</title>
 </head>
 <body>
-  
+  <header class="contact-header">
+    <div class="wrapper">
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="index.html#about">About</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+      <h1>Get in touch</h1>
+    </div>
+  </header>
+  <main class="contact-main">
+    <form action="submit" class="contact-form">
+      <fieldset class="personal-info">
+        <label for="name" class="visuallyHidden">Name</label>
+        <input type="text" id="name" placeholder="Name">
+        <label for="email" class="visuallyHidden">Email address</label>
+        <input type="email" id="email" placeholder="Email address">
+      </fieldset>
+      <textarea name="message" id="message" placeholder="Message"></textarea>
+      <button type="submit">Submit</button>
+    </form>
+  </main>
+  <aside>
+    <div class="wrapper">
+      <div class="social">
+        <ul>
+          <li><i class="fab fa-facebook-f"></i></li>
+          <li><i class="fab fa-instagram"></i></li>
+          <li><i class="fab fa-twitter"></i></li>
+          <li><i class="fab fa-whatsapp"></i></li>
+        </ul>
+      </div> <!-- .social -->
+      <p>info@email.com</p>
+      <div class="address">
+        <p>123-456-7890</p>
+        <p>123 Queen St W, Unit 10</p>
+        <p>Toronto, Ontario</p>
+        <p>M5V2D5</p>
+      </div>
+    </div> <!-- .wrapper -->
+  </aside>
+  <footer>
+    <p>Copyright <i class="far fa-copyright"></i> 2019 Juno College</p>
+  </footer>
 </body>
 </html>

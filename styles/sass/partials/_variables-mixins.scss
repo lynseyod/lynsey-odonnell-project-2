@@ -2,6 +2,13 @@
 $main-light: #2b331b;
 $main-dark: #171b0e;
 $pop-color: #ffd300;
+$black: #0f0f0f;
 
 // fontssssss
 $font: 'josefin sans', sans-serif;
+
+//mixin it up
+@mixin flex-center {
+  align-items: center;
+  justify-content: center;
+}
