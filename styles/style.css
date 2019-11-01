@@ -303,17 +303,28 @@ header h1 .resto {
   width: 40%;
 }
 
+.subpage-header {
+  height: 80vh;
+}
+
+.subpage-header h1 {
+  margin-top: 10%;
+}
+
 .contact-header {
   background-image: url("../assets/contact-header.jpg");
-  height: 80vh;
 }
 
 .contact-header li:nth-of-type(4) {
   border-bottom: 3px solid #ffd300;
 }
 
-.contact-header h1 {
-  margin-top: 10%;
+.blog-header {
+  background-image: url("../assets/blog-header.jpg");
+}
+
+.blog-header li:nth-of-type(3) {
+  border-bottom: 3px solid #ffd300;
 }
 
 section:nth-of-type(even) {

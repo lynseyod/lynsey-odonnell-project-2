@@ -49,13 +49,23 @@ header {
   }
 }
 
+.subpage-header {
+  height: 80vh;
+  h1 {
+    margin-top: 10%;
+  }
+}
+
 .contact-header {
   background-image: url("../assets/contact-header.jpg");
-  height: 80vh;
   li:nth-of-type(4) {
     border-bottom: 3px solid $pop-color;
   }
-  h1 {
-    margin-top: 10%;
+}
+
+.blog-header {
+  background-image: url("../assets/blog-header.jpg");
+  li:nth-of-type(3) {
+    border-bottom: 3px solid $pop-color;
   }
 }
