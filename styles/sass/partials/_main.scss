@@ -18,7 +18,11 @@ section:nth-of-type(odd) {
     position: relative;
     i {
       position: absolute;
-      top: 20%;
+      display: block;
+      height: 30px;
+      width: 30px;
+      text-align: center;
+      top: 18%;
       left: -50px;
       color: $main-dark;
       z-index: 10;
@@ -26,13 +30,13 @@ section:nth-of-type(odd) {
         content: "";
         display: block;
         z-index: -1;
-        height:40px;
-        width:40px;
         background-color: $pop-color;
         border-radius:50%;
         position: absolute;
-        top:-10px;
-        left: -10px;
+        top:-45%;
+        left: -25%;
+        bottom: -5%;
+        right: -25%;
       }
     }
     h2 {

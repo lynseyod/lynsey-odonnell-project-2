@@ -1,14 +1,16 @@
 header {
-  padding: 1%;
+  padding-top: 3%;
   background-position: center;
   background-size: cover;
   width: 100%;
   position: relative;
+  font-family: $font;
   .wrapper {
     flex-direction: column;
   }
   nav {
     ul {
+      font-weight: bold;
       display: flex;
       li:not(:nth-of-type(1)) {
         margin: 0 30px;
@@ -43,7 +45,17 @@ header {
   background-image: url("../assets/home-header.jpg");
   height: 90vh;
   li:nth-of-type(1){
-    border-bottom: 3px solid $pop-color;
+    position: relative;
+    &::after {
+      content: "";
+      display: block;
+      height: 3px;
+      width: 90%;
+      background-color: $pop-color;
+      position: absolute;
+      bottom: 0;
+      left: 5%;
+    }
   }
   h1 {
     width: 40%;
@@ -60,13 +72,33 @@ header {
 .contact-header {
   background-image: url("../assets/contact-header.jpg");
   li:nth-of-type(4) {
-    border-bottom: 3px solid $pop-color;
+    position: relative;
+    &::after {
+      content: "";
+      display: block;
+      height: 3px;
+      width: 90%;
+      background-color: $pop-color;
+      position: absolute;
+      bottom: 0;
+      left: 5%;
+    }
   }
 }
 
 .blog-header {
   background-image: url("../assets/blog-header.jpg");
   li:nth-of-type(3) {
-    border-bottom: 3px solid $pop-color;
+    position: relative;
+    &::after {
+      content: "";
+      display: block;
+      height: 3px;
+      width: 90%;
+      background-color: $pop-color;
+      position: absolute;
+      bottom: 0;
+      left: 5%;
+    }
   }
 }

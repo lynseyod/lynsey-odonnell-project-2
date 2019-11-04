@@ -245,11 +245,12 @@ button {
 }
 
 header {
-  padding: 1%;
+  padding-top: 3%;
   background-position: center;
   background-size: cover;
   width: 100%;
   position: relative;
+  font-family: "josefin sans", sans-serif;
 }
 
 header .wrapper {
@@ -260,6 +261,7 @@ header .wrapper {
 }
 
 header nav ul {
+  font-weight: bold;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -302,7 +304,18 @@ header h1 .resto {
 }
 
 .home-header li:nth-of-type(1) {
-  border-bottom: 3px solid #ffd300;
+  position: relative;
+}
+
+.home-header li:nth-of-type(1)::after {
+  content: "";
+  display: block;
+  height: 3px;
+  width: 90%;
+  background-color: #ffd300;
+  position: absolute;
+  bottom: 0;
+  left: 5%;
 }
 
 .home-header h1 {
@@ -322,7 +335,18 @@ header h1 .resto {
 }
 
 .contact-header li:nth-of-type(4) {
-  border-bottom: 3px solid #ffd300;
+  position: relative;
+}
+
+.contact-header li:nth-of-type(4)::after {
+  content: "";
+  display: block;
+  height: 3px;
+  width: 90%;
+  background-color: #ffd300;
+  position: absolute;
+  bottom: 0;
+  left: 5%;
 }
 
 .blog-header {
@@ -330,7 +354,18 @@ header h1 .resto {
 }
 
 .blog-header li:nth-of-type(3) {
-  border-bottom: 3px solid #ffd300;
+  position: relative;
+}
+
+.blog-header li:nth-of-type(3)::after {
+  content: "";
+  display: block;
+  height: 3px;
+  width: 90%;
+  background-color: #ffd300;
+  position: absolute;
+  bottom: 0;
+  left: 5%;
 }
 
 section:nth-of-type(even) {
@@ -361,7 +396,11 @@ section:nth-of-type(odd) {
 
 .about .container i {
   position: absolute;
-  top: 20%;
+  display: block;
+  height: 30px;
+  width: 30px;
+  text-align: center;
+  top: 18%;
   left: -50px;
   color: #171b0e;
   z-index: 10;
@@ -371,13 +410,13 @@ section:nth-of-type(odd) {
   content: "";
   display: block;
   z-index: -1;
-  height: 40px;
-  width: 40px;
   background-color: #ffd300;
   border-radius: 50%;
   position: absolute;
-  top: -10px;
-  left: -10px;
+  top: -45%;
+  left: -25%;
+  bottom: -5%;
+  right: -25%;
 }
 
 .about .container h2 {
