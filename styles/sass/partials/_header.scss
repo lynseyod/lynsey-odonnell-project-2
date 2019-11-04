@@ -12,6 +12,7 @@ header {
     ul {
       font-weight: bold;
       display: flex;
+      text-shadow: 2px 2px 2px $black;
       li:not(:nth-of-type(1)) {
         margin: 0 30px;
       }
@@ -28,6 +29,9 @@ header {
     position: absolute;
     right: 0;
     bottom: -30%;
+    @include mq-tablet {
+      bottom: -20%;
+    }
   }
   h1 {
     font-size: 6.9rem;
@@ -37,6 +41,9 @@ header {
       padding-top: 15px;
       color: $main-dark;
       background-color: white;
+    }
+    @include mq-tablet {
+      line-height: 1.5;
     }
   }
 }

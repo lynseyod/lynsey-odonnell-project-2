@@ -63,6 +63,14 @@ section:nth-of-type(odd) {
     &:first-of-type {
       align-self: flex-end;
     }
+    @include mq-tablet {
+      margin-bottom: 0;
+    }
+    &:nth-of-type(2) {
+      @include mq-tablet {
+        margin-bottom: 5%;
+      }
+    }
   }
   img {
     width: 45%;
@@ -71,12 +79,18 @@ section:nth-of-type(odd) {
     &:first-of-type {
       top: -10%;
       left: 0;
+      @include mq-tablet {
+        top: -5%;
+      }
     }
     &:last-of-type {
       order: 2;
       bottom: -10%;
       right: 0;
-      transform: rotateY(180deg); 
+      transform: rotateY(180deg);
+      @include mq-tablet {
+        bottom: 0;
+      }
     }
   }
   button {
@@ -102,6 +116,7 @@ section:nth-of-type(odd) {
   }
   .wrapper {
     img {
+      align-self: flex-start;
       width: 25%;
       margin-right: 5%;
       box-shadow: -10px 10px $pop-color;

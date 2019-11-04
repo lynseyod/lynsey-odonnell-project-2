@@ -183,6 +183,12 @@ html {
   font-size: 62.5%;
 }
 
+@media (max-width: 1024px) {
+  html {
+    font-size: 55%;
+  }
+}
+
 body {
   font-size: 2rem;
   font-family: sans-serif;
@@ -265,6 +271,7 @@ header nav ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  text-shadow: 2px 2px 2px #0f0f0f;
 }
 
 header nav ul li:not(:nth-of-type(1)) {
@@ -286,6 +293,12 @@ header img {
   bottom: -30%;
 }
 
+@media (max-width: 1024px) {
+  header img {
+    bottom: -20%;
+  }
+}
+
 header h1 {
   font-size: 6.9rem;
   font-weight: 600;
@@ -296,6 +309,12 @@ header h1 .resto {
   padding-top: 15px;
   color: #171b0e;
   background-color: white;
+}
+
+@media (max-width: 1024px) {
+  header h1 {
+    line-height: 1.5;
+  }
 }
 
 .home-header {
@@ -453,6 +472,18 @@ section:nth-of-type(odd) {
       align-self: flex-end;
 }
 
+@media (max-width: 1024px) {
+  .blog article {
+    margin-bottom: 0;
+  }
+}
+
+@media (max-width: 1024px) {
+  .blog article:nth-of-type(2) {
+    margin-bottom: 5%;
+  }
+}
+
 .blog img {
   width: 45%;
   position: absolute;
@@ -465,6 +496,12 @@ section:nth-of-type(odd) {
   left: 0;
 }
 
+@media (max-width: 1024px) {
+  .blog img:first-of-type {
+    top: -5%;
+  }
+}
+
 .blog img:last-of-type {
   -webkit-box-ordinal-group: 3;
       -ms-flex-order: 2;
@@ -473,6 +510,12 @@ section:nth-of-type(odd) {
   right: 0;
   -webkit-transform: rotateY(180deg);
           transform: rotateY(180deg);
+}
+
+@media (max-width: 1024px) {
+  .blog img:last-of-type {
+    bottom: 0;
+  }
 }
 
 .blog button {
@@ -508,6 +551,8 @@ section:nth-of-type(odd) {
 }
 
 .extras .wrapper img {
+  -ms-flex-item-align: start;
+      align-self: flex-start;
   width: 25%;
   margin-right: 5%;
   -webkit-box-shadow: -10px 10px #ffd300;
