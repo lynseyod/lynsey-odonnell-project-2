@@ -8,17 +8,21 @@ section:nth-of-type(odd) {
 
 .about {
   padding: 200px 0 100px 0;
-  @include mq-tab-portrait {
-    padding: 100px 0;
-  }
   .wrapper {
     flex-wrap: wrap;
     justify-content: flex-end;
+    @include mq-tab-portrait {
+      @include no-more-flex;
+    }
   }
   .container {
     width: 45%;
     margin-left: 5%;
     position: relative;
+    @include mq-tab-portrait {
+      width: 85%;
+      margin-left: 15%;
+    }
     i {
       position: absolute;
       display: block;
@@ -58,7 +62,6 @@ section:nth-of-type(odd) {
   }
   h3 {
     font-size: 4.5rem;
-
   }
   article {
     width: 45%;
@@ -74,6 +77,9 @@ section:nth-of-type(odd) {
         margin-bottom: 5%;
       }
     }
+    @include mq-tab-portrait {
+      width: 100%;
+    }
   }
   img {
     width: 45%;
@@ -85,6 +91,9 @@ section:nth-of-type(odd) {
       @include mq-tablet {
         top: -5%;
       }
+      @include mq-tab-portrait {
+        top: -10%;
+      }
     }
     &:last-of-type {
       order: 2;
@@ -92,13 +101,23 @@ section:nth-of-type(odd) {
       right: 0;
       transform: rotateY(180deg);
       @include mq-tablet {
-        bottom: 0;
+        bottom: 5%;
       }
+      @include mq-tab-portrait {
+        bottom: -10%;
+      }
+    }
+    @include mq-tab-portrait {
+      width: 90%;
     }
   }
   button {
     background-color: $pop-color;
     color: $main-dark;
+  }
+  @include mq-tab-portrait {
+    align-items: center;
+    padding: 50% 0;
   }
 }
 
@@ -123,6 +142,11 @@ section:nth-of-type(odd) {
       width: 25%;
       margin-right: 5%;
       box-shadow: -10px 10px $pop-color;
+      @include mq-tab-portrait {
+        width: 75%;
+        align-self: center;
+        margin-right: 0;
+      }
     }
     .article-aside {
       width: 70%;
@@ -131,7 +155,18 @@ section:nth-of-type(odd) {
       justify-content: space-between;
       align-items: flex-start;
       text-align: left;
+      @include mq-tab-portrait {
+        width: 100%;
+        margin-top: 5%;
+        align-items: center;
+      }
     }
+    @include mq-tab-portrait {
+      @include no-more-flex;
+    }
+  }
+  @include mq-tab-portrait {
+    padding: 250px 0 125px 0;
   }
 }
 
@@ -142,7 +177,17 @@ section:nth-of-type(odd) {
     justify-content: space-between;  
     img {
       width: calc(100%/3 - 3%);
+      @include mq-tab-portrait {
+        width: 80%;
+        margin-bottom: 5%;
+      }
     }
+    @include mq-tab-portrait {
+      @include no-more-flex;
+    }
+  }
+  @include mq-tab-portrait {
+    padding-bottom: 0;
   }
 }
 
@@ -217,18 +262,6 @@ form {
   width: 100%;
   display: flex;
   justify-content: space-between;
-  aside {
-    width: 30%;
-    order: -1;
-    ul {
-      flex-direction: column;
-      padding-left: 20px;
-      width: 100%;
-      li {
-        list-style-type: disc;
-      }
-    }
-  }
   main {
     width: 60%;
     position: relative;
@@ -238,6 +271,9 @@ form {
       padding-top: 500px;
       h2 {
         color: $pop-color;
+      }
+      @include mq-tablet {
+        padding-top: 350px;
       }
     }
     article img {
@@ -271,6 +307,9 @@ form {
       color: $pop-color;
     }
   }
+  @include mq-tab-portrait {
+    @include no-more-flex;
+  }
 }
 
 aside {
@@ -282,7 +321,6 @@ aside {
     display: flex;
     justify-content: space-between;
     width: 15%;
-
   }
 }
 
@@ -298,15 +336,36 @@ aside {
 }
 
 .blog-aside {
+  width: 30%;
+  order: -1;
   margin-top: 100px;
   position: relative;
   img {
     position: absolute;
     top: -20px;
     right: 20px;
+  }  
+  ul {
+    flex-direction: column;
+    padding-left: 20px;
+    width: 100%;
+    li {
+      list-style-type: disc;
+    }
   }
   li a {
     color: white;
+  }
+  @include mq-tab-portrait {
+    margin-top: 0;
+    width: 105%;
+    align-self: flex-end;
+    padding-top: 0;
+    img {
+      top: -20%;
+      right: 20px;
+      width: 50%;
+    }
   }
 }
 
@@ -317,5 +376,13 @@ aside {
   padding: 400px 20px 20px 20px;
   h3 {
     color: $pop-color;
+  }
+  @include mq-tablet {
+    padding-top: 300px;
+  }
+  @include mq-tab-portrait {
+    padding-top: 75px;
+    padding-right: calc(50% + 20px);
+    flex: 1 0 60%;
   }
 }
