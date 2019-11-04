@@ -32,6 +32,10 @@ header {
     @include mq-tablet {
       bottom: -20%;
     }
+    @include mq-tab-portrait {
+      width: 80%;
+      bottom: -10%;
+    }
   }
   h1 {
     font-size: 6.9rem;
@@ -41,6 +45,9 @@ header {
       padding-top: 15px;
       color: $main-dark;
       background-color: white;
+      @include mq-tab-portrait {
+        box-shadow: 5px 5px $main-dark;
+      }
     }
     @include mq-tablet {
       line-height: 1.5;

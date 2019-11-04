@@ -8,6 +8,9 @@ section:nth-of-type(odd) {
 
 .about {
   padding: 200px 0 100px 0;
+  @include mq-tab-portrait {
+    padding: 100px 0;
+  }
   .wrapper {
     flex-wrap: wrap;
     justify-content: flex-end;

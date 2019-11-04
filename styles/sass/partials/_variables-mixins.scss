@@ -18,3 +18,9 @@ $font: 'josefin sans', sans-serif;
     @content;
   }
 }
+
+@mixin mq-tab-portrait {
+  @media (max-width: 768px) {
+    @content;
+  }
+}
