@@ -95,18 +95,21 @@ section:nth-of-type(odd) {
     background-color: $main-dark;
     color: $pop-color;
   }
-  @include mq-tablet {
+  @media (max-width: 1260px) {
+    h3 {
+      font-size: 4rem;
+    }
     article {
       margin-bottom: 0;
       &:nth-of-type(2) {
         margin-bottom: 5%;
       }
-    }
+  }
     img:first-of-type {
       top: -5%;
     }
     img:last-of-type {
-      bottom: 5%;
+      bottom: 0;
     }
   }
   @include mq-tab-portrait {

@@ -383,9 +383,16 @@ header h1 .resto {
   }
 }
 
-@media (max-width: 620px) {
+@media (max-width: 630px) {
   header h1 {
     font-size: 5.5rem;
+  }
+}
+
+@media (max-width: 450px) {
+  header img {
+    top: 75%;
+    width: 80%;
   }
 }
 
@@ -428,7 +435,7 @@ header h1 .resto {
   }
 }
 
-@media (max-width: 620px) {
+@media (max-width: 630px) {
   .subpage-header {
     height: 50vh;
   }
@@ -616,7 +623,10 @@ section:nth-of-type(odd) {
   color: #ffd300;
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1260px) {
+  .blog h3 {
+    font-size: 4rem;
+  }
   .blog article {
     margin-bottom: 0;
   }
@@ -627,7 +637,7 @@ section:nth-of-type(odd) {
     top: -5%;
   }
   .blog img:last-of-type {
-    bottom: 5%;
+    bottom: 0;
   }
 }
 
@@ -899,7 +909,7 @@ form button:hover, form button:focus {
   }
 }
 
-@media (max-width: 620px) {
+@media (max-width: 630px) {
   .contact-form {
     top: -50px;
     right: 40px;
@@ -1022,7 +1032,7 @@ form button:hover, form button:focus {
   }
 }
 
-@media (max-width: 620px) {
+@media (max-width: 630px) {
   .blog-container .blog-main {
     -ms-flex-item-align: center;
         -ms-grid-row-align: center;
@@ -1119,7 +1129,7 @@ aside ul {
   }
 }
 
-@media (max-width: 620px) {
+@media (max-width: 630px) {
   .contact-aside {
     padding: 350px 0 50px 0;
   }
@@ -1192,7 +1202,7 @@ aside ul {
   }
 }
 
-@media (max-width: 620px) {
+@media (max-width: 630px) {
   .blog-aside img {
     display: none;
   }
@@ -1225,7 +1235,7 @@ aside ul {
   }
 }
 
-@media (max-width: 620px) {
+@media (max-width: 630px) {
   .aside-container {
     padding-top: 5%;
     padding-right: 20px;

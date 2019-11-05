@@ -37,7 +37,7 @@ $font: 'josefin sans', sans-serif;
 }
 
 @mixin mq-phone {
-  @media (max-width: 620px) {
+  @media (max-width: 630px) {
     @content;
   }
 }
