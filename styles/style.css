@@ -604,7 +604,14 @@ section:nth-of-type(odd) {
 
 .blog button {
   background-color: #ffd300;
+  border: 1px solid #ffd300;
   color: #171b0e;
+}
+
+.blog button:hover,
+.blog button:focus {
+  background-color: #171b0e;
+  color: #ffd300;
 }
 
 @media (max-width: 1024px) {
@@ -677,6 +684,18 @@ section:nth-of-type(odd) {
   margin-right: 5%;
   -webkit-box-shadow: -10px 10px #ffd300;
           box-shadow: -10px 10px #ffd300;
+}
+
+.extras button {
+  background-color: white;
+  border: 1px solid white;
+  color: #171b0e;
+}
+
+.extras button:hover,
+.extras button:focus {
+  background-color: #2b331b;
+  color: white;
 }
 
 @media (max-width: 860px) {
@@ -800,6 +819,12 @@ form fieldset input {
   border-bottom: 2px solid #ffd300;
 }
 
+form fieldset input:focus {
+  background-color: white;
+  color: #0f0f0f;
+  border: 1px solid #ffd300;
+}
+
 form textarea {
   width: 100%;
   padding: 10px;
@@ -809,11 +834,23 @@ form textarea {
   resize: none;
 }
 
+form textarea:focus {
+  background-color: white;
+  color: #0f0f0f;
+}
+
 form button {
   margin-top: 5%;
   display: block;
   width: 100%;
   background-color: #ffd300;
+  border: 1px solid #ffd300;
+}
+
+form button:hover,
+form button:focus {
+  background-color: inherit;
+  color: #ffd300;
 }
 
 @media (max-width: 860px) {
@@ -856,11 +893,6 @@ form button {
 
 .comments form {
   margin-bottom: 50px;
-}
-
-.comments form input,
-.comments form textarea {
-  background-color: #2b331b;
 }
 
 .comments form textarea {
@@ -1020,6 +1052,25 @@ aside ul {
 
 .contact-aside li a {
   color: #ffd300;
+  position: relative;
+  z-index: 10;
+}
+
+.contact-aside li a:hover, .contact-aside li a:focus {
+  color: white;
+}
+
+.contact-aside li a:hover::before, .contact-aside li a:focus::before {
+  content: "";
+  display: block;
+  height: 40px;
+  width: 40px;
+  background-color: #ffd300;
+  border-radius: 50%;
+  position: absolute;
+  top: -5px;
+  left: -10px;
+  z-index: -1;
 }
 
 @media (max-width: 860px) {

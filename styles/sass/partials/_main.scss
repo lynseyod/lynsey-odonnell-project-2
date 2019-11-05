@@ -87,7 +87,13 @@ section:nth-of-type(odd) {
   }
   button {
     background-color: $pop-color;
+    border: 1px solid $pop-color;
     color: $main-dark;
+  }
+  button:hover,
+  button:focus {
+    background-color: $main-dark;
+    color: $pop-color;
   }
   @include mq-tablet {
     article {
@@ -143,6 +149,16 @@ section:nth-of-type(odd) {
       margin-right: 5%;
       box-shadow: -10px 10px $pop-color;
     }
+  }
+  button {
+    background-color: white;
+    border: 1px solid white;
+    color: $main-dark;
+  }
+  button:hover,
+  button:focus {
+    background-color: $main-light;
+    color: white;
   }
   @include mq-tab-portrait {
     padding: 250px 0 125px 0;
@@ -215,6 +231,11 @@ form {
       border: none;
       border-bottom: 2px solid $pop-color;
     }
+    input:focus {
+      background-color: white;
+      color: $black;
+      border: 1px solid $pop-color;
+    }
   }
   textarea {
     width: 100%;
@@ -224,11 +245,21 @@ form {
     color: white;
     resize: none;
   }
+  textarea:focus {
+    background-color: white;
+    color: $black;
+  }
   button {
     margin-top: 5%;
     display: block;
     width: 100%;
     background-color: $pop-color;
+    border: 1px solid $pop-color;
+  }
+  button:hover,
+  button:focus {
+    background-color: inherit;
+    color: $pop-color;
   }
   @include mq-tab-portrait {
     fieldset {
@@ -265,10 +296,6 @@ form {
 
 .comments form {
   margin-bottom: 50px;
-  input,
-  textarea {
-    background-color: $main-light;
-  }
   textarea {
     height: 200px;
   }
@@ -379,6 +406,24 @@ aside {
   }
   li a {
     color: $pop-color;
+    position: relative;
+    z-index: 10;
+    &:hover,
+    &:focus {
+      color: white;
+      &::before {
+        content: "";
+        display: block;
+        height: 40px;
+        width: 40px;
+        background-color: $pop-color;
+        border-radius: 50%;
+        position: absolute;
+        top: -5px;
+        left: -10px;
+        z-index: -1;
+      }
+    }
   }
   @include mq-tab-portrait {
     padding: 450px 0 50px 0;
