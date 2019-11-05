@@ -93,18 +93,29 @@ header {
 .home-header {
   background-image: url("../assets/home-header.jpg");
   height: 90vh;
-  li:nth-of-type(1){
+  li {
     position: relative;
-    &::after {
-      content: "";
-      display: block;
-      height: 3px;
-      width: 90%;
-      background-color: $pop-color;
-      position: absolute;
-      bottom: 0;
-      left: 5%;
-    }
+  }
+  li:nth-of-type(1)::after {
+    content: "";
+    display: block;
+    height: 3px;
+    width: 90%;
+    background-color: $pop-color;
+    position: absolute;
+    bottom: 0;
+    left: 5%;    
+  }
+  li:hover::after,
+  li:focus::after {
+    content: "";
+    display: block;
+    height: 3px;
+    width: 90%;
+    background-color: $pop-color;
+    position: absolute;
+    bottom: 0;
+    left: 5%;
   }
   h1 {
     width: 40%;

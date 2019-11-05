@@ -376,11 +376,23 @@ header h1 .resto {
   height: 90vh;
 }
 
-.home-header li:nth-of-type(1) {
+.home-header li {
   position: relative;
 }
 
 .home-header li:nth-of-type(1)::after {
+  content: "";
+  display: block;
+  height: 3px;
+  width: 90%;
+  background-color: #ffd300;
+  position: absolute;
+  bottom: 0;
+  left: 5%;
+}
+
+.home-header li:hover::after,
+.home-header li:focus::after {
   content: "";
   display: block;
   height: 3px;
