@@ -119,13 +119,8 @@ header {
         background-color: $pop-color;
         position: absolute;
         bottom: 0;
-        left: 5%;
-        transition: width 0.3s;
+        left: 5%;    
       }  
-    }
-    &:hover,
-    &:focus + li:nth-of-type(1) {
-      width: 0%;
     }
   }
   h1 {
