@@ -810,6 +810,12 @@ form fieldset {
   padding: 0;
   padding-bottom: 5%;
   border: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 form fieldset input {
@@ -822,9 +828,11 @@ form fieldset input {
 }
 
 form fieldset input:focus {
-  background-color: white;
-  color: #0f0f0f;
-  border: 1px solid #ffd300;
+  border-top: 2px solid #ffd300;
+  border-left: 2px solid #ffd300;
+  border-right: 2px solid #ffd300;
+  -webkit-box-shadow: 0px 0px 5px 5px #ffd300;
+          box-shadow: 0px 0px 5px 5px #ffd300;
 }
 
 form textarea {
@@ -837,8 +845,8 @@ form textarea {
 }
 
 form textarea:focus {
-  background-color: white;
-  color: #0f0f0f;
+  -webkit-box-shadow: 0px 0px 5px 5px #ffd300;
+          box-shadow: 0px 0px 5px 5px #ffd300;
 }
 
 form button {
@@ -849,10 +857,11 @@ form button {
   border: 1px solid #ffd300;
 }
 
-form button:hover,
-form button:focus {
+form button:hover, form button:focus {
   background-color: inherit;
   color: #ffd300;
+  -webkit-box-shadow: 0px 0px 5px 5px #ffd300;
+          box-shadow: 0px 0px 5px 5px #ffd300;
 }
 
 @media (max-width: 860px) {
@@ -872,6 +881,12 @@ form button:focus {
   position: absolute;
   top: -150px;
   right: 50px;
+}
+
+.contact-form input {
+  border-top: 2px solid #171b0e;
+  border-left: 2px solid #171b0e;
+  border-right: 2px solid #171b0e;
 }
 
 .contact-form textarea {
@@ -895,6 +910,12 @@ form button:focus {
 
 .comments form {
   margin-bottom: 50px;
+}
+
+.comments form input {
+  border-top: 2px solid #2b331b;
+  border-left: 2px solid #2b331b;
+  border-right: 2px solid #2b331b;
 }
 
 .comments form textarea {
@@ -1133,6 +1154,23 @@ aside ul {
 
 .blog-aside li a {
   color: white;
+  position: relative;
+}
+
+.blog-aside li a::after {
+  content: "";
+  display: block;
+  background-color: #ffd300;
+  height: 50%;
+  width: 0;
+  position: absolute;
+  bottom: -2px;
+  -webkit-transition: width 0.3s;
+  transition: width 0.3s;
+}
+
+.blog-aside li a:hover::after, .blog-aside li a:focus::after {
+  width: 100%;
 }
 
 @media (max-width: 860px) {

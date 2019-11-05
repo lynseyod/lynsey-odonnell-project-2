@@ -223,6 +223,8 @@ form {
     padding: 0;
     padding-bottom: 5%;
     border: none;
+    display: flex;
+    justify-content: space-between;
     input {
       background-color: inherit;
       width: 47%;
@@ -230,11 +232,10 @@ form {
       color: white;
       border: none;
       border-bottom: 2px solid $pop-color;
-    }
-    input:focus {
-      background-color: white;
-      color: $black;
-      border: 1px solid $pop-color;
+      &:focus {
+        @include border-states($pop-color);
+        box-shadow: 0px 0px 5px 5px $pop-color;
+      }  
     }
   }
   textarea {
@@ -244,10 +245,9 @@ form {
     border: 2px solid $pop-color;
     color: white;
     resize: none;
-  }
-  textarea:focus {
-    background-color: white;
-    color: $black;
+    &:focus {
+      box-shadow: 0px 0px 5px 5px $pop-color;
+    }
   }
   button {
     margin-top: 5%;
@@ -255,11 +255,12 @@ form {
     width: 100%;
     background-color: $pop-color;
     border: 1px solid $pop-color;
-  }
-  button:hover,
-  button:focus {
-    background-color: inherit;
-    color: $pop-color;
+    &:hover,
+    &:focus {
+      background-color: inherit;
+      color: $pop-color;
+      box-shadow: 0px 0px 5px 5px $pop-color;
+    }
   }
   @include mq-tab-portrait {
     fieldset {
@@ -280,6 +281,9 @@ form {
   position: absolute;
   top: -150px;
   right: 50px;
+  input {
+    @include border-states($main-dark);
+  }
   textarea {
     height: 80%;
   }
@@ -296,6 +300,9 @@ form {
 
 .comments form {
   margin-bottom: 50px;
+  input {
+    @include border-states($main-light);
+  }
   textarea {
     height: 200px;
   }
@@ -468,6 +475,21 @@ aside {
   }
   li a {
     color: white;
+    position: relative;
+    &::after {
+      content: "";
+      display: block;
+      background-color: $pop-color;
+      height: 50%;
+      width: 0;
+      position: absolute;
+      bottom: -2px;
+      transition: width 0.3s;
+    }
+    &:hover::after,
+    &:focus::after {
+      width: 100%
+    }
   }
   @include mq-tab-portrait {
     margin-top: 0;
