@@ -293,15 +293,21 @@ header ul li {
   position: relative;
 }
 
-header ul li:hover::after, header ul li:focus::after {
+header ul li::after {
   content: "";
   display: block;
   height: 3px;
-  width: 90%;
+  width: 0;
   background-color: #ffd300;
   position: absolute;
   bottom: 0;
   left: 5%;
+  -webkit-transition: width 0.3s;
+  transition: width 0.3s;
+}
+
+header ul li:hover::after, header ul li:focus::after {
+  width: 90%;
 }
 
 header ul a {
@@ -397,6 +403,13 @@ header h1 .resto {
   position: absolute;
   bottom: 0;
   left: 5%;
+  -webkit-transition: width 0.3s;
+  transition: width 0.3s;
+}
+
+.home-header li:hover,
+.home-header li:focus + li:nth-of-type(1) {
+  width: 0%;
 }
 
 .home-header h1 {
