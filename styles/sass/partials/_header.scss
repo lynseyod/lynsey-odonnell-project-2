@@ -97,11 +97,6 @@ header {
       display: block;
     }
   }
-  @include mq-phone {
-    h1 {
-      font-size: 5.5rem;
-    }
-  }
   @media (max-width: 450px) {
     img {
       top: 75%;

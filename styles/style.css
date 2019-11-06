@@ -210,6 +210,18 @@ p {
   display: flex;
 }
 
+@media (max-width: 860px) {
+  .wrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
 ul, li {
   list-style-type: none;
   margin: 0;
@@ -247,9 +259,28 @@ h1 {
   font-weight: 600;
 }
 
+@media (max-width: 630px) {
+  h1 {
+    font-size: 5.5rem;
+  }
+}
+
+@media (max-width: 450px) {
+  h1 {
+    font-size: 5rem;
+  }
+}
+
 h2 {
   font-size: 4.5rem;
   line-height: 99.8px;
+}
+
+@media (max-width: 630px) {
+  h2 {
+    font-size: 3.5rem;
+    line-height: 50px;
+  }
 }
 
 h3 {
@@ -407,12 +438,6 @@ header h1 .resto {
   }
   header input[type="checkbox"]:checked + nav {
     display: block;
-  }
-}
-
-@media (max-width: 630px) {
-  header h1 {
-    font-size: 5.5rem;
   }
 }
 
@@ -902,6 +927,18 @@ form button:hover, form button:focus {
 }
 
 @media (max-width: 860px) {
+  form {
+    width: 100%;
+  }
+  form fieldset {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
   form fieldset input {
     display: block;
     width: 100%;

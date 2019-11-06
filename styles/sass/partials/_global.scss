@@ -22,6 +22,9 @@ p {
   max-width: 1240px;
   margin: 0 auto;
   display: flex;
+  @include mq-tab-portrait {
+    @include no-more-flex;
+  }
 }
 
 ul, li {
@@ -59,11 +62,21 @@ h3 {
 h1 {
   font-size: 6.9rem;
   font-weight: 600;
+  @include mq-phone {
+    font-size: 5.5rem;
+  }
+  @media (max-width: 450px) {
+    font-size: 5rem;
+  }
 }
 
 h2 {
   font-size: 4.5rem;
   line-height: 99.8px;
+  @include mq-phone {
+    font-size: 3.5rem;
+    line-height: 50px;
+  }
 }
 
 h3 {

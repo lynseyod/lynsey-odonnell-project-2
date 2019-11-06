@@ -266,7 +266,9 @@ form {
     }
   }
   @include mq-tab-portrait {
+    width: 100%;
     fieldset {
+      @include no-more-flex;
       input {
       display: block;
       width: 100%;
