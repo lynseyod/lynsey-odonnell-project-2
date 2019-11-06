@@ -8,17 +8,17 @@ $black: #0f0f0f;
 $font: 'josefin sans', sans-serif;
 
 //mixin it up
-@mixin flex-center {
+@mixin flex-center { //assuming I'll want to use this but we'll see.
   align-items: center;
   justify-content: center;
 }
 
-@mixin no-more-flex {
+@mixin no-more-flex { //cause we know this is important for mobile.
   flex-direction: column;
   align-items: center;
 }
 
-@mixin border-states($color) {
+@mixin border-states($color) { //to set up focus states on the forms
   border-top: 2px solid $color;
   border-left: 2px solid $color;
   border-right: 2px solid $color;

@@ -46,10 +46,6 @@ section:nth-of-type(odd) {
         right: -25%;
       }
     }
-    h2 {
-      font-size: 4.5rem;
-      line-height: 99.8px;
-    }
   }
 }
 
@@ -60,14 +56,14 @@ section:nth-of-type(odd) {
     flex-direction: column;
     justify-content: flex-end;
   }
-  h3 {
-    font-size: 4.5rem;
-  }
   article {
     width: 45%;
     margin: 5% 0;
     &:first-of-type {
       align-self: flex-end;
+    }
+    &:nth-of-type(2) {
+      text-align: right;
     }
   }
   img {
@@ -96,9 +92,6 @@ section:nth-of-type(odd) {
     color: $pop-color;
   }
   @media (max-width: 1260px) {
-    h3 {
-      font-size: 4rem;
-    }
     article {
       margin-bottom: 0;
       &:nth-of-type(2) {
@@ -131,7 +124,7 @@ section:nth-of-type(odd) {
 }
 
 .extras {
-  padding: 125px 0;
+  padding: 175px 0 125px 0;
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -148,7 +141,7 @@ section:nth-of-type(odd) {
   .wrapper {
     img {
       align-self: flex-start;
-      width: 25%;
+      height: 100%;
       margin-right: 5%;
       box-shadow: -10px 10px $pop-color;
     }
@@ -162,6 +155,13 @@ section:nth-of-type(odd) {
   button:focus {
     background-color: $main-light;
     color: white;
+  }
+  @include mq-tablet {
+    .wrapper {
+      img {
+        height: 75%;
+      }
+    }
   }
   @include mq-tab-portrait {
     padding: 250px 0 125px 0;
@@ -177,7 +177,7 @@ section:nth-of-type(odd) {
 }
 
 .article-content {
-  width: 70%;
+  flex: 0 1 70%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -357,8 +357,10 @@ form {
         width: 85%;
       }
     }
-    h4 {
+    h5 {
       color: $pop-color;
+      font-weight: bold;
+      font-size: 2.2rem;
     }
   }
   @include mq-tab-portrait {
@@ -463,7 +465,7 @@ aside {
 }
 
 .blog-aside {
-  width: 30%;
+  width: 35%;
   order: -1;
   margin-top: 100px;
   position: relative;
@@ -518,10 +520,9 @@ aside {
 
 .aside-container {
   background-color: $main-dark;
-  padding-top: 400px;
   margin-left: 10%;
-  padding: 400px 20px 20px 20px;
-  h3 {
+  padding: 450px 20px 20px 20px;
+  h4 {
     color: $pop-color;
   }
   @include mq-tablet {
